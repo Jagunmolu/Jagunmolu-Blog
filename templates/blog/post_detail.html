@@ -2,7 +2,11 @@
 
 {% block content %}
 
-    <h1>{{ object.title }}</h1>
-    <p>{{ object.body }}</p>
+    <div class="post-entry">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+    </div>
 
+    <p><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></p>
+    <p><a href="{% url 'post_delete' post.pk %}">x Delete Blog Post</a></p>
 {% endblock content %}
